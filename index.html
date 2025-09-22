@@ -1,128 +1,107 @@
-	<!--
-Ad-ready One-Page Website
-- Single-file HTML you can edit and deploy instantly.
-- Includes structured content (SEO), responsive layout, and clear places to insert ad code (e.g., Google AdSense).
-
-How to use:
-1. Edit the content (title, article, images).
-2. Replace the AD PLACEHOLDERS with the ad code provided by your ad network (e.g., AdSense).
-3. Deploy to a static host (Netlify, Vercel, or any basic web host) or upload to your own server.
-4. Sign up for AdSense or another ad partner and add their code where indicated.
-
-Notes:
-- This is a minimal, fast-loading template built to get you started quickly. For better earnings, publish multiple articles, focus on traffic from higher-CPM countries, and follow ad network policies.
--->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>How to Choose the Best [Niche Product] | Quick Guide</title>
-  <meta name="description" content="Quick, practical guide to choosing the best [niche product]. Actionable tips, pros & cons, and top picks.">
-  <meta name="keywords" content="buying guide, [niche], review, comparison">
-  <link rel="icon" href="data:,"><style>
-    /* Minimal clean styling */
-    :root{--max:900px;--accent:#0a74da}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.6;margin:0;color:#111}
-    .wrap{max-width:var(--max);margin:28px auto;padding:20px}
-    header{display:flex;gap:16px;align-items:center}
-    h1{font-size:clamp(20px,4vw,32px);margin:0}
-    .meta{color:#666;font-size:13px}
-    article{margin-top:18px}
-    .hero{background:#f7f9fc;padding:14px;border-radius:8px}
-    .ad-slot{border:2px dashed #ddd;padding:12px;text-align:center;margin:18px 0;border-radius:8px}
-    .grid{display:grid;grid-template-columns:1fr;gap:12px}
-    @media(min-width:880px){.grid{grid-template-columns:2fr 320px}}
-    aside{background:#fff;padding:14px;border-radius:8px;box-shadow:0 1px 4px rgba(10,10,10,0.04)}
-    footer{color:#666;font-size:13px;margin-top:26px}
-    .cta{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:6px;background:var(--accent);color:#fff;text-decoration:none}
-  </style>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824440744000793"
-     crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Car Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824440744000793" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f0f2f5; color:#333; }
+header { background: linear-gradient(90deg,#1e90ff,#00bfff); padding:20px; color:white; position:sticky; top:0; z-index:1000; }
+header h1 { margin:0; font-size:2em; text-align:center; }
+nav { text-align:center; margin-top:10px; }
+nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; transition:0.3s; }
+nav a:hover { text-decoration:underline; color:#ffeb3b; }
+
+/* Hero */
+.hero { position:relative; background: url('https://source.unsplash.com/1600x600/?supercar,car') center/cover no-repeat; height:400px; display:flex; align-items:center; justify-content:center; color:white; text-align:center; }
+.hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); }
+.hero-content { position:relative; z-index:1; max-width:800px; }
+.hero h2 { font-size:2.5em; margin-bottom:20px; }
+.hero p { font-size:1.2em; line-height:1.6; }
+
+/* Container */
+.container { max-width:1000px; margin:40px auto; padding:0 20px; }
+section { margin-bottom:60px; }
+h2 { color:#1e90ff; margin-bottom:25px; text-align:center; }
+p { line-height:1.6; }
+
+/* Cards */
+.cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
+.card { background:white; padding:20px; box-shadow:0 4px 8px rgba(0,0,0,0.1); border-radius:8px; transition:0.3s; text-align:center; }
+.card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
+.card i { font-size:2.5em; margin-bottom:15px; color:#1e90ff; }
+
+/* Ads */
+.ad-slot { margin:30px auto; text-align:center; }
+
+/* Footer */
+footer { background:#1e90ff; color:white; text-align:center; padding:20px; }
+
+/* Responsive */
+@media(max-width:768px){ .hero h2{font-size:2em;} .hero p{font-size:1em;} }
+</style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div>
-      <h1>How to Choose the Best [Niche Product] — Quick, Practical Tips</h1>
-      <div class="meta">Updated: <!--DATE--> • Read: 4 mins • 100k+ readers</div>
-    </div>
-  </header>
 
-  <article class="grid">
-    <div>
-      <section class="hero">
-        <p>Short intro paragraph. Explain the problem your reader has and promise quick solutions. Use clear bullets and a short summary.</p>
-      </section>
+<header>
+  <h1>Ultimate Car Hub</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-      <!-- AD SLOT: Top of article - good for visibility (replace with AdSense code) -->
-      <div class="ad-slot" id="ad-top">AD PLACEHOLDER - TOP</div>
-
-      <h2>1. What matters the most</h2>
-      <p>Explain 3–5 actionable factors (price, durability, performance). Use short paragraphs and bolds for scanning.</p>
-
-      <h3>Quick checklist</h3>
-      <ul>
-        <li>Factor 1 — short note.</li>
-        <li>Factor 2 — short note.</li>
-        <li>Factor 3 — short note.</li>
-      </ul>
-
-      <!-- AD SLOT: Mid article (in-content) - often the highest RPM -->
-      <div class="ad-slot" id="ad-mid">AD PLACEHOLDER - MID</div>
-
-      <h2>2. Top recommended picks</h2>
-      <ol>
-        <li><strong>Product A</strong> — short reason why.</li>
-        <li><strong>Product B</strong> — short reason why.</li>
-        <li><strong>Product C</strong> — short reason why.</li>
-      </ol>
-
-      <h2>3. Quick Q&A</h2>
-      <p><strong>Q:</strong> Short question? <strong>A:</strong> Short answer.</p>
-
-      <!-- AD SLOT: Bottom of article -->
-      <div class="ad-slot" id="ad-bottom">AD PLACEHOLDER - BOTTOM</div>
-
-      <footer>
-        <p>Like this guide? Bookmark it. Consider subscribing for similar quick guides.</p>
-      </footer>
-    </div>
-
-    <aside>
-      <div>
-        <h3>Subscribe</h3>
-        <p>Get short weekly tips. No spam.</p>
-        <a class="cta" href="#subscribe">Subscribe</a>
-      </div>
-
-      <div style="margin-top:12px">
-        <h4>Sponsored</h4>
-        <p>We open a limited number of sponsor slots per month. Contact us: sponsor@example.com</p>
-      </div>
-    </aside>
-  </article>
+<div class="hero">
+  <div class="hero-content">
+    <h2>Welcome to Ultimate Car Hub</h2>
+    <p>Your destination for car reviews, tuning tips, and automotive news. Discover the latest in the world of cars!</p>
+  </div>
 </div>
 
-<!-- Optional analytics or small helper script -->
-<script>
-  // Replace placeholders with dynamic date
-  document.querySelectorAll('<!--DATE-->').forEach(()=>{});
-  // Simple script to auto-populate a visible updated date
-  document.querySelector('.meta').innerHTML = 'Updated: ' + new Date().toLocaleDateString() + ' • Read: 4 mins • 100k+ readers';
-</script>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824440744000793"
-     crossorigin="anonymous"></script>
-<!-- Coffee -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-6824440744000793"
-     data-ad-slot="5074717646"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+<div class="container">
+
+  <section id="features">
+    <h2>Featured Sections</h2>
+    <div class="cards">
+      <div class="card"><i class="fas fa-car"></i><h3>Car Reviews</h3><p>In-depth reviews of the latest supercars and daily drivers.</p></div>
+      <div class="card"><i class="fas fa-tools"></i><h3>Tuning Guides</h3><p>Step-by-step tutorials to modify and upgrade your ride.</p></div>
+      <div class="card"><i class="fas fa-road"></i><h3>Track Tips</h3><p>Learn how to get the most out of your car on the road and track.</p></div>
+    </div>
+
+    <div class="ad-slot">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6824440744000793" data-ad-slot="5074717646" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </section>
+
+  <section id="latest">
+    <h2>Latest Articles</h2>
+    <div class="cards">
+      <div class="card"><i class="fas fa-gas-pump"></i><h3>2025 Mustang GT Review</h3><p>A detailed look at the newest Mustang, its performance, and design.</p></div>
+      <div class="card"><i class="fas fa-cogs"></i><h3>Top 5 Mods for BMW M3</h3><p>Enhance your BMW M3 with these performance and styling upgrades.</p></div>
+      <div class="card"><i class="fas fa-trophy"></i><h3>Track Day Essentials</h3><p>Everything you need to prepare your car and yourself for a track day.</p></div>
+    </div>
+
+    <div class="ad-slot">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6824440744000793" data-ad-slot="5074717646" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2025 Ultimate Car Hub. All rights reserved.
+</footer>
+
 </body>
 </html>
