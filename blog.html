@@ -5,10 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog - Ultimate Car Hub</title>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6824440744000793" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <style>
 body { font-family: 'Roboto', sans-serif; margin:0; padding:0; background:#f0f2f5; color:#333; }
 header { background: linear-gradient(90deg,#1e90ff,#00bfff); padding:20px; color:white; position:sticky; top:0; z-index:1000; }
@@ -16,30 +12,17 @@ header h1 { margin:0; font-size:2em; text-align:center; }
 nav { text-align:center; margin-top:10px; }
 nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; transition:0.3s; }
 nav a:hover { text-decoration:underline; color:#ffeb3b; }
-
-/* Hero */
-.hero { position:relative; background: url('https://source.unsplash.com/1600x600/?supercar,street') center/cover no-repeat; height:350px; display:flex; align-items:center; justify-content:center; color:white; text-align:center; }
-.hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); }
-.hero-content { position:relative; z-index:1; max-width:800px; }
-.hero h2 { font-size:2.5em; margin-bottom:20px; }
-.hero p { font-size:1.2em; line-height:1.6; }
-
-/* Container */
 .container { max-width:1000px; margin:40px auto; padding:0 20px; }
-h2 { color:#1e90ff; margin-bottom:25px; text-align:center; }
-p { line-height:1.6; }
-
-/* Cards */
-.cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-.card { background:white; padding:20px; box-shadow:0 4px 8px rgba(0,0,0,0.1); border-radius:8px; transition:0.3s; text-align:center; }
-.card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.2); }
-.card img { width:100%; border-radius:8px; margin-bottom:15px; }
-
-/* Ads */
-.ad-slot { margin:30px auto; text-align:center; }
-
-/* Footer */
-footer { background:#1e90ff; color:white; text-align:center; padding:20px; }
+.blog-container { display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; }
+.card { background:white; padding:15px; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1); width:calc(33% - 20px); }
+.card img { width:100%; border-radius:5px; }
+.card h3 { color:#1e90ff; margin-top:15px; }
+.card p { margin:10px 0; }
+.card a { color:#1e90ff; font-weight:bold; text-decoration:none; }
+.card a:hover { text-decoration:underline; }
+footer { background:#1e90ff; color:white; text-align:center; padding:20px; margin-top:40px; }
+@media(max-width:900px){.card{width:48%;}} 
+@media(max-width:600px){.card{width:100%;}}
 </style>
 </head>
 <body>
@@ -54,46 +37,35 @@ footer { background:#1e90ff; color:white; text-align:center; padding:20px; }
   </nav>
 </header>
 
-<div class="hero">
-  <div class="hero-content">
-    <h2>Ultimate Car Blog</h2>
-    <p>Stay up-to-date with the latest car reviews, tuning tips, and automotive news.</p>
-  </div>
-</div>
-
 <div class="container">
+  <h2 style="text-align:center; color:#1e90ff; margin-bottom:40px;">Latest Articles</h2>
+  <div class="blog-container">
 
-  <section id="articles">
-    <h2>Latest Articles</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x250/?mustang,car" alt="Mustang GT">
-        <h3>2025 Mustang GT Review</h3>
-        <p>An in-depth look at the newest Mustang GT’s performance, design, and features.</p>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x250/?bmw,m3" alt="BMW M3">
-        <h3>Top 5 Mods for BMW M3</h3>
-        <p>Upgrade your BMW M3 with these performance and styling modifications.</p>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x250/?track,car" alt="Track Day">
-        <h3>Track Day Essentials</h3>
-        <p>Prepare your car and yourself for a safe and exciting track day experience.</p>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x250/?electric,car" alt="Electric Cars">
-        <h3>Electric Cars to Watch in 2025</h3>
-        <p>Explore the latest electric vehicles making waves in the automotive world.</p>
-      </div>
+    <!-- Article 1 -->
+    <div class="card">
+      <img src="https://source.unsplash.com/400x250/?mustang,car" alt="Mustang GT">
+      <h3>2025 Mustang GT Review</h3>
+      <p>An in-depth look at the newest Mustang GT’s performance, design, and features.</p>
+      <a href="mustang-gt-2025.html">Read More</a>
     </div>
 
-    <div class="ad-slot">
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6824440744000793" data-ad-slot="5074717646" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    <!-- Article 2 -->
+    <div class="card">
+      <img src="https://source.unsplash.com/400x250/?bmw,m3" alt="BMW M3">
+      <h3>Top 5 Mods for BMW M3</h3>
+      <p>Enhance your BMW M3 with these top modifications for performance and style.</p>
+      <a href="bmw-m3-mods.html">Read More</a>
     </div>
-  </section>
 
+    <!-- Article 3 -->
+    <div class="card">
+      <img src="https://source.unsplash.com/400x250/?track,car" alt="Track Day">
+      <h3>Track Day Essentials</h3>
+      <p>Everything you need to know to prepare your car and yourself for a safe track day.</p>
+      <a href="track-day-essentials.html">Read More</a>
+    </div>
+
+  </div>
 </div>
 
 <footer>
