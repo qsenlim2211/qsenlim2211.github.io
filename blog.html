@@ -73,35 +73,32 @@ footer { background:#1e90ff; color:white; text-align:center; padding:20px; margi
 
 <div class="container">
 
-  <section>
-    <h2 class="section-title">Featured Cars & Articles</h2>
-    <div class="carousel">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x250/?mustang,gt" alt="Mustang GT">
-        <div class="card-content">
-          <h3>2025 Mustang GT</h3>
-          <p>Performance, track readiness, and modifications for the latest Mustang GT.</p>
-          <a href="mustang-gt-2025.html">Read More</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x250/?bmw,m3" alt="BMW M3">
-        <div class="card-content">
-          <h3>BMW M3 Mods</h3>
-          <p>Full guide to upgrading your BMW M3 for track and street performance.</p>
-          <a href="bmw-m3-mods.html">Read More</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x250/?race-track,gear" alt="Track Essentials">
-        <div class="card-content">
-          <h3>Track Day Essentials</h3>
-          <p>Everything you need for a safe and thrilling track day experience.</p>
-          <a href="track-day-essentials.html">Read More</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<section>
+  <h2 class="section-title">Latest Mods & News</h2>
+  <div class="latest-news" id="latest-news"></div>
+</section>
+
+<script>
+  fetch('posts.json')
+    .then(response => response.json())
+    .then(posts => {
+      const container = document.getElementById('latest-news');
+      posts.forEach(post => {
+        const card = document.createElement('div');
+        card.className = 'news-card';
+        card.innerHTML = `
+          <img src="${post.image}" alt="${post.title}">
+          <div class="news-content">
+            <h4>${post.title}</h4>
+            <p>${post.summary}</p>
+            <a href="${post.link}">Read More</a>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(err => console.error('Error loading posts:', err));
+</script>
 
   <section>
     <h2 class="section-title">Quick Links</h2>
