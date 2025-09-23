@@ -73,12 +73,67 @@ footer { background:#1e90ff; color:white; text-align:center; padding:20px; margi
 
 <div class="container">
 
-<section>
-  <h2 class="section-title">Latest Mods & News</h2>
-  <div class="latest-news" id="latest-news"></div>
-</section>
+  <!-- Featured Carousel -->
+  <section>
+    <h2 class="section-title">Featured Cars & Articles</h2>
+    <div class="carousel" id="featured-carousel"></div>
+  </section>
+
+  <!-- Quick Links -->
+  <section>
+    <h2 class="section-title">Quick Links</h2>
+    <div class="quick-links">
+      <a href="mustang-gt-2025.html">Mustang GT</a>
+      <a href="bmw-m3-mods.html">BMW M3</a>
+      <a href="track-day-essentials.html">Track Gear</a>
+      <a href="blog.html">All Blog Posts</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Latest Mods & News (Dynamic) -->
+  <section>
+    <h2 class="section-title">Latest Mods & News</h2>
+    <div class="latest-news" id="latest-news"></div>
+  </section>
+
+  <!-- AdSense -->
+  <div class="ad-slot">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6824440744000793" data-ad-slot="5074717646" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2025 Ultimate Car Hub. All rights reserved.
+</footer>
+
+<!-- Scripts for dynamic content -->
 
 <script>
+  // Load Featured Carousel
+  fetch('featured.json')
+    .then(response => response.json())
+    .then(items => {
+      const carousel = document.getElementById('featured-carousel');
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${item.image}" alt="${item.title}">
+          <div class="card-content">
+            <h3>${item.title}</h3>
+            <p>${item.summary}</p>
+            <a href="${item.link}">Read More</a>
+          </div>
+        `;
+        carousel.appendChild(card);
+      });
+    })
+    .catch(err => console.error('Error loading featured items:', err));
+
+  // Load Latest Mods & News
   fetch('posts.json')
     .then(response => response.json())
     .then(posts => {
@@ -99,66 +154,6 @@ footer { background:#1e90ff; color:white; text-align:center; padding:20px; margi
     })
     .catch(err => console.error('Error loading posts:', err));
 </script>
-
-  <section>
-    <h2 class="section-title">Quick Links</h2>
-    <div class="quick-links">
-      <a href="mustang-gt-2025.html">Mustang GT</a>
-      <a href="bmw-m3-mods.html">BMW M3</a>
-      <a href="track-day-essentials.html">Track Gear</a>
-      <a href="blog.html">All Blog Posts</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Latest Mods & News</h2>
-    <div class="latest-news">
-      <div class="news-card">
-        <img src="https://source.unsplash.com/400x250/?car,engine" alt="Engine Mods">
-        <div class="news-content">
-          <h4>Top Engine Mods for 2025 Mustangs</h4>
-          <p>Boost horsepower, torque, and performance with the latest aftermarket upgrades.</p>
-          <a href="blog.html">Read More</a>
-        </div>
-      </div>
-      <div class="news-card">
-        <img src="https://source.unsplash.com/400x250/?car,suspension" alt="Suspension">
-        <div class="news-content">
-          <h4>Suspension Upgrades for Better Track Handling</h4>
-          <p>Learn how to adjust coilovers, sway bars, and bushings for perfect cornering.</p>
-          <a href="blog.html">Read More</a>
-        </div>
-      </div>
-      <div class="news-card">
-        <img src="https://source.unsplash.com/400x250/?helmet,track" alt="Track Gear">
-        <div class="news-content">
-          <h4>Track Day Safety Gear</h4>
-          <p>FIA-approved helmets, gloves, suits, and preparation tips for safe track sessions.</p>
-          <a href="track-day-essentials.html">Read More</a>
-        </div>
-      </div>
-      <div class="news-card">
-        <img src="https://source.unsplash.com/400x250/?car,exhaust" alt="Exhaust Mods">
-        <div class="news-content">
-          <h4>Best Exhaust Upgrades for BMW M3</h4>
-          <p>Enhance sound, performance, and throttle response with high-quality exhausts.</p>
-          <a href="bmw-m3-mods.html">Read More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="ad-slot">
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6824440744000793" data-ad-slot="5074717646" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-</div>
-
-<footer>
-  &copy; 2025 Ultimate Car Hub. All rights reserved.
-</footer>
 
 </body>
 </html>
